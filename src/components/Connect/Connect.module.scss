@@ -1,0 +1,62 @@
+@import "../../styles";
+
+.center {
+  @include center();
+  min-height: 100vh;
+
+  & > .container {
+    width: 50rem;
+    max-width: 85vw;
+    background-color: $light-gray;
+    padding: 3rem;
+    background: linear-gradient(180deg, #fbfafb 0%, #ffffff 100%);
+    border: 0.6rem solid #ffffff;
+    box-shadow: 0px 0px 3rem #cdc6db4d;
+    border-radius: 1.6rem;
+    @include scaleYAnimation(200ms);
+
+    & > h1 {
+      text-align: center;
+      @include font(2.4rem, 600, 3rem);
+    }
+
+    & > p {
+      @include font(1.4rem, 400, 1.7rem);
+      text-align: center;
+      color: rgba($color: $dark, $alpha: 0.4);
+      margin-bottom: 2.4rem;
+    }
+
+    & > button {
+      width: 100%;
+      max-width: 30rem;
+      border: 1px solid #e7e7e7;
+      border-radius: 0.8rem;
+      margin: 0 auto;
+      background-color: transparent;
+      @include flex(row, center, space-between);
+      cursor: pointer;
+      padding: 1.5rem;
+
+      & > svg {
+        font-size: 1.8rem;
+        color: $link;
+      }
+
+      & > span {
+        flex: 1;
+        @include font(1.6rem, 500, 2rem);
+        text-align: center;
+      }
+
+      &:hover {
+        background-color: $light;
+      }
+
+      &:disabled {
+        background-color: $light;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

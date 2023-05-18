@@ -1,0 +1,18 @@
+{
+  "address": "0xE4Cb923e8C610cf4789Df1f5480C21927F538Bdb",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "recipient",
+          "type": "address"
+        }
+      ],
+      "name": "sendMoney",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ]
+}
